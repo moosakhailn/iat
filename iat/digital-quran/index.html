@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IAT — Digital Qur'an Reader</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= HEADER STACK (navbar) ================= -->
+  <div class="header-stack" id="headerStack">
+    <div class="top-bar">
+      <div class="top-inner">
+        <div class="top-left">
+          <span class="top-item">
+            <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9A2 2 0 1112 7a2 2 0 010 4z"/></svg>
+            132 N Glenville Dr, Richardson, TX 75081
+          </span>
+          <span class="top-item">
+            <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79A15.05 15.05 0 0013.21 17.38l2.2-2.2a1 1 0 011.02-.24c1.12.35 2.33.54 3.58.54a1 1 0 011 1V20a1 1 0 01-1 1C7.82 21.18 2.82 16.18 2 6.01A1 1 0 013 5h3.01a1 1 0 011 1c0 1.25.19 2.46.54 3.58a1 1 0 01-.24 1.02L6.62 10.79z"/></svg>
+            (972) 863-9696
+          </span>
+        </div>
+        <div class="top-right">
+          <a class="top-link" href="mailto:abuhanifahiat@gmail.com">
+            <svg class="icon email-ico" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.104 0-2 .896-2 2v12c0 1.104.896 2 2 2h16c1.104 0 2-.896 2-2V6c0-1.104-.896-2-2-2zm0 2l-8 5-8-5v-0.001L20 6zm0 12H4V8l8 5 8-5v10z"/></svg>
+            <span>abuhanifahiat@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar">
+      <div class="nav-inner">
+        <div class="brand">
+          <img src="iat-logo.jpg" alt="IAT logo" class="logo">
+          <div class="brand-text">
+            <div class="site-name">Islamic Association of Texas</div>
+            <div class="site-tag">Community • Education • Worship</div>
+          </div>
+        </div>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="/homepage/index.html">Home</a>
+          <a href="/digital-quran/index.html">Quran</a>
+          <a href="/islam/index.html">Islam</a>
+          <a href="#">Events</a>
+          <a href="#" class="donate">Donate</a>
+          <a href="#">Contact</a>
+        </nav>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+
+    <section class="ribbon-banner">
+      <div class="ribbon-text">Ramadan Mubarak — Islamic Association of Texas</div>
+    </section>
+
+    <aside id="mobileSidebar" class="mobile-sidebar" aria-hidden="true">
+      <div class="mobile-top">
+        <div class="mobile-brand">
+          <img src="iat-logo.jpg" class="mobile-logo" alt="IAT logo">
+          <div class="mobile-title">Islamic Association of Texas</div>
+        </div>
+        <button class="close-btn" id="closeBtn" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="mobile-nav">
+        <a href="/homepage/index.html">Home</a>
+        <a href="/digital-quran/index.html">Quran</a>
+        <a href="/islam/index.html">Islam</a>
+        <a href="#">Events</a>
+        <a href="#" class="donate">Donate</a>
+        <a href="#">Contact</a>
+      </nav>
+    </aside>
+  </div>
+  <!-- ================= END HEADER STACK ================= -->
+
+  <main class="page container">
+    <div class="iat-page-content">
+
+      <!-- top controls -->
+      <header class="dq-topbar">
+        <div class="dq-brand">
+          <div class="dq-title">Digital Qur'an — IAT</div>
+          <div class="dq-sub">Arabic · English · Pashto · Dari</div>
+        </div>
+
+        <div class="dq-controls">
+          <div class="dq-control">
+            <label class="dq-label">View</label>
+            <select id="viewMode" class="dq-select">
+              <option value="verse">Verse Mode</option>
+              <option value="page">Page (Mushaf)</option>
+            </select>
+          </div>
+
+          <div class="dq-control">
+            <label class="dq-label">Translation</label>
+            <select id="translationSelect" class="dq-select">
+              <option value="english">English</option>
+              <option value="pashto">Pashto</option>
+              <option value="dari">Dari</option>
+            </select>
+          </div>
+
+          <div class="dq-control">
+            <label class="dq-label">Transliteration</label>
+            <button id="translitToggle" class="dq-icon-btn" aria-pressed="false" title="Toggle transliteration">
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+              <span class="dq-btn-label">Off</span>
+            </button>
+          </div>
+
+          <div class="dq-control">
+            <label class="dq-label">Reciter</label>
+            <select id="reciterSelect" class="dq-select"></select>
+          </div>
+
+          <div class="dq-control">
+            <label class="dq-label">Theme</label>
+            <button id="themeToggle" class="dq-icon-btn" title="Toggle theme">
+              <svg id="themeIcon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a9 9 0 100 18 9 9 0 000-18z"/></svg>
+              <span class="dq-btn-label">Dark</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <div class="dq-app">
+        <aside class="dq-sidebar">
+          <div class="dq-segment" role="tablist" aria-label="Select list">
+            <button id="segSurah" class="dq-seg-btn" aria-selected="true">Surahs</button>
+            <button id="segJuz" class="dq-seg-btn" aria-selected="false">Juz</button>
+          </div>
+
+          <input id="surahSearch" class="dq-search" placeholder="Search surah or #..." />
+          <ul id="surahList" class="dq-surah-list" aria-label="Surah list"></ul>
+
+          <div id="juzInfo" class="juz-info muted" style="margin-top:6px;">Juz: —</div>
+
+          <div class="dq-range card" style="margin-top:10px;">
+            <label class="dq-label" style="margin-bottom:6px">Read Range</label>
+            <select id="rangeMode" class="dq-select" aria-label="Range mode">
+              <option value="surah">Surah → Surah</option>
+              <option value="juz">Juz (Para) → Juz</option>
+              <option value="all">Whole Quran</option>
+            </select>
+
+            <div id="surahRangeControls" style="margin-top:8px;">
+              <div style="display:flex;gap:8px;">
+                <select id="startSurah" class="dq-select"></select>
+                <select id="endSurah" class="dq-select"></select>
+              </div>
+            </div>
+
+            <div id="juzRangeControls" style="display:none;margin-top:8px;">
+              <div style="display:flex;gap:8px;">
+                <select id="startJuz" class="dq-select"></select>
+                <select id="endJuz" class="dq-select"></select>
+              </div>
+            </div>
+
+            <button id="startRangeBtn" class="dq-btn primary" style="margin-top:10px;width:100%;">Start Reading Range</button>
+          </div>
+
+          <div class="dq-page-controls">
+            <label id="pageLabel">Page <input id="pageNumber" type="number" min="1" max="604" value="1" class="dq-small-input" /></label>
+
+            <div class="dq-page-nav">
+              <button id="prevPage" class="dq-btn small">‹ Prev</button>
+              <button id="nextPage" class="dq-btn small">Next ›</button>
+            </div>
+
+            <div class="dq-player-actions">
+              <button id="playSurahBtn" class="dq-btn primary">
+                <svg width="14" height="14" viewBox="0 0 24 24" class="ic-inline" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+                <span>Play</span>
+              </button>
+
+              <div class="dq-play-controls" style="margin-top:8px;">
+                <button id="prevAyahBtn" class="dq-btn" title="Previous ayah">◀◀</button>
+                <button id="playPauseBtn" class="dq-btn" title="Play / Pause">▶</button>
+                <button id="stopBtn" class="dq-btn" title="Stop">■</button>
+                <button id="nextAyahBtn" class="dq-btn" title="Next ayah">▶▶</button>
+              </div>
+
+              <div class="dq-progress-row" style="margin-top:8px;">
+                <span id="elapsed">0:00</span>
+                <input id="seek" type="range" min="0" max="100" value="0" />
+                <span id="duration">0:00</span>
+              </div>
+
+              <div class="dq-repeat-row" style="margin-top:8px;display:flex;gap:8px;align-items:center;">
+                <label style="display:flex;align-items:center;gap:8px;">
+                  Repeat
+                  <select id="repeatMode" class="dq-select" style="min-width:110px;">
+                    <option value="none">None</option>
+                    <option value="ayah">Repeat Ayah</option>
+                    <option value="surah">Repeat Surah</option>
+                  </select>
+                </label>
+
+                <div class="repeat-count" style="display:flex;align-items:center;gap:6px;">
+                  <button id="decRepeat" class="dq-btn small" title="Decrease">−</button>
+                  <input id="repeatCount" type="number" min="1" value="1" class="dq-tiny-input" />
+                  <button id="incRepeat" class="dq-btn small" title="Increase">+</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <small class="dq-note">APIs: Quran.com · AlQuran Cloud · QuranEnc</small>
+        </aside>
+
+        <main id="quranContainer" class="dq-main verse-mode" aria-live="polite">
+          <div class="dq-loading">Please Select A Surah/Juz.</div>
+        </main>
+      </div>
+    </main>
+
+      <!-- Footer -->
+
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <h3>Islamic Association of Texas</h3>
+      <p>
+        Serving the Richardson community with prayer, education,
+        and unity — grounded in the Qur’an and Sunnah.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/homepage/index.html">Home</a></li>
+        <li><a href="#donate">Donate</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#services">Community Services</a></li>
+      </ul>
+    </div>
+
+    <!-- TOOLS & POLICIES -->
+    <div class="footer-column">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="/digital-quran/index.html">Digital Qur’an</a></li>
+        <li><a href="#">AI Memorization Tool (Coming Soon)</a></li>
+        <li><a href="/islam/index.html">Islam</a></li>
+        <li><a href="#">Terms of Use</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <ul class="footer-contact">
+        <li>
+          <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9A2 2 0 1112 7a2 2 0 010 4z"/></svg>
+            132 N Glenville Dr, Richardson, TX 75081
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79A15.05 15.05 0 0013.21 17.38l2.2-2.2a1 1 0 011.02-.24c1.12.35 2.33.54 3.58.54a1 1 0 011 1V20a1 1 0 01-1 1C7.82 21.18 2.82 16.18 2 6.01A1 1 0 013 5h3.01a1 1 0 011 1c0 1.25.19 2.46.54 3.58a1 1 0 01-.24 1.02L6.62 10.79z"/></svg>
+            (972) 863-9696
+        </li>
+        <li>
+          <svg class="icon email-ico" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.104 0-2 .896-2 2v12c0 1.104.896 2 2 2h16c1.104 0 2-.896 2-2V6c0-1.104-.896-2-2-2zm0 2l-8 5-8-5v-0.001L20 6zm0 12H4V8l8 5 8-5v10z"/></svg>
+            <a href="mailto:abuhanifahiat@gmail.com">abuhanifahiat@gmail.com</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> Islamic Association of Texas. All rights reserved.</span>
+
+    <a
+      href="https://www.linkedin.com/in/numanullah-moosakhail-4504a1350/"
+      target="_blank"
+      class="developer-credit"
+    >
+      Developed by <strong>Numanullah Moosakhail</strong>
+    </a>
+  </div>
+</footer>
+
+      <audio id="audio" preload="metadata"></audio>
+      <div id="toast" class="dq-toast hidden" role="status" aria-live="polite"></div>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
