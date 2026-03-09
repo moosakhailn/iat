@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IAT - Islamic Association of Texas</title>
+
+  <!-- Fonts & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- Main stylesheet (this is the merged CSS below) -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- FontAwesome kit (optional) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- reCAPTCHA v2 -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+  <!-- ================= HEADER STACK (shared navbar) ================= -->
+  <div class="header-stack" id="headerStack">
+    <!-- TOP CONTACT BAR -->
+    <div class="top-bar">
+      <div class="top-inner">
+        <div class="top-left">
+          <span class="top-item">
+            <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9A2 2 0 1112 7a2 2 0 010 4z"/></svg>
+            132 N Glenville Dr, Richardson, TX 75081
+          </span>
+          <span class="top-item">
+            <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79A15.05 15.05 0 0013.21 17.38l2.2-2.2a1 1 0 011.02-.24c1.12.35 2.33.54 3.58.54a1 1 0 011 1V20a1 1 0 01-1 1C7.82 21.18 2.82 16.18 2 6.01A1 1 0 013 5h3.01a1 1 0 011 1c0 1.25.19 2.46.54 3.58a1 1 0 01-.24 1.02L6.62 10.79z"/></svg>
+            (972) 863-9696
+          </span>
+        </div>
+        <div class="top-right">
+          <a class="top-link" href="mailto:abuhanifahiat@gmail.com">
+            <svg class="icon email-ico" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.104 0-2 .896-2 2v12c0 1.104.896 2 2 2h16c1.104 0 2-.896 2-2V6c0-1.104-.896-2-2-2zm0 2l-8 5-8-5v-0.001L20 6zm0 12H4V8l8 5 8-5v10z"/></svg>
+            <span>abuhanifahiat@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <div class="nav-inner">
+        <div class="brand">
+          <img src="iat-logo.jpg" alt="IAT logo" class="logo">
+          <div class="brand-text">
+            <div class="site-name">Islamic Association of Texas</div>
+            <div class="site-tag">Community • Education • Worship</div>
+          </div>
+        </div>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="/homepage/index.html">Home</a>
+          <a href="/digital-quran/index.html">Quran</a>
+          <a href="/islam/index.html">Islam</a>
+          <a href="#">Events</a>
+          <a href="#" class="donate">Donate</a>
+          <a href="#">Contact</a>
+        </nav>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+
+    <!-- Ribbon Banner -->
+    <section class="ribbon-banner">
+      <div class="ribbon-text">Ramadan Mubarak — Islamic Association of Texas</div>
+    </section>
+
+    <!-- MOBILE SIDEBAR -->
+    <aside id="mobileSidebar" class="mobile-sidebar" aria-hidden="true">
+      <div class="mobile-top">
+        <div class="mobile-brand">
+          <img src="iat-logo.jpg" class="mobile-logo" alt="IAT logo">
+          <div class="mobile-title">Islamic Association of Texas</div>
+        </div>
+        <button class="close-btn" id="closeBtn" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="mobile-nav">
+        <a href="/homepage/index.html">Home</a>
+        <a href="/digital-quran/index.html">Quran</a>
+        <a href="/islam/index.html">Islam</a>
+        <a href="#">Events</a>
+        <a href="#" class="donate">Donate</a>
+        <a href="#">Contact</a>
+      </nav>
+    </aside>
+  </div>
+  <!-- ================= END HEADER STACK ================= -->
+
+  <main class="page container">
+<section class="hero-prayer">
+  <!-- Hero Slider -->
+  <div class="hero-slider">
+    <div class="slide active">
+      <img src="masjid-outside.webp" alt="Masjid Image 1" width="600px" height="450px"/>
+      <div class="overlay">
+        <h1>Islamic Association of Texas</h1>
+        <p class="slogan">Community • Education • Worship</p>
+        <div class="hero-buttons">
+          <a href="#" class="hero-btn donate">Donate</a>
+          <a href="#" class="hero-btn membership">Membership (Coming Soon)</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="slider-1.jpg" alt="Masjid Image 2" width="600px" height="450px"/>
+      <div class="overlay">
+        <h1>Islamic Association of Texas</h1>
+        <p class="slogan">Community • Education • Worship</p>
+        <div class="hero-buttons">
+          <a href="#" class="hero-btn donate">Donate</a>
+          <a href="#" class="hero-btn membership">Membership (Coming Soon)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider arrows -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+
+    <!-- Pagination -->
+    <div class="pagination">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+<!-- Prayer Card -->
+<div class="prayer-card">
+
+  <!-- Masjidal Embed (inside card) -->
+    <!--<iframe src="https://timing.athanplus.com/masjid/widgets/embed?theme=1&masjid_id=JAm7kRKR&labelstart=ADHAN" type="text/html" width="100%" height="560" frameborder="0" allowtransparency="true"></iframe>-->
+    <iframe src="https://timing.athanplus.com/masjid/widgets/embed?theme=1&amp;masjid_id=xdy03lAX&monthly=no" type="text/html" width="100%" height="560" frameborder="0" allowtransparency="true"></iframe>
+  </div>
+
+</div>
+</section>
+
+<!-- Imam Section -->
+ <section class="imams-section">
+  <h2 class="section-title">Our Imams</h2>
+
+  <div class="imams-grid">
+    <!-- Imam 1 -->
+    <div class="imam-card">
+      <div class="imam-image">
+        <img src="pfp.jpeg" alt="Imam 1">
+      </div>
+      <div class="imam-info">
+        <h3>Imam's Name</h3>
+        <p>jskgdkgdjhgdjhgsjhgdhjdg
+          jhdgjhdsghdjgdsjghdhgsdjhd
+          asghsgsdhdgshsagdhsgdshdgd
+          jshjahjgdhashjgdhjgdhgjh
+          gdhjgjhdgjahgdkuieuyquyeu
+          iyeudjdajgdhdhjgjdhagdhgf
+          uetregdfnmcbvsdkjlkjfasg
+          futrutirwywueiuetiurtyu
+          qqbdnmbc.</p>
+      </div>
+    </div>
+
+    <!-- Imam 2 -->
+    <div class="imam-card">
+      <div class="imam-image">
+        <img src="pfp.jpeg" alt="Imam 2">
+      </div>
+      <div class="imam-info">
+        <h3>Imam's Name</h3>
+        <p>jskgdkgdjhgdjhgsjhgdhjdg
+          jhdgjhdsghdjgdsjghdhgsdjhd
+          asghsgsdhdgshsagdh
+          sgdshdgdjshjahjgdhashjgdh
+          jgdhgjhgdhjgjhdgjahgdkuie
+          uyquyeuiyeudjdajgdhdhjgjd
+          hagdhgfuetregdfnmcbvsdkjl
+          kjfasgfutrutirwywueiuetiu
+          rtyuqqbdnmbc.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<!-- Quran AD -->
+<section class="quran-hero">
+  <div class="quran-hero-content">
+    <h2>Digital Quran & AI Memorization</h2>
+    <p>Practice your Quran memorization with our AI assistant or explore the Digital Quran with recitations from multiple Qaris.</p>
+    <div class="hero-buttons">
+      <button class="cta-button">Try AI Memorization (Coming Soon)</button>
+      <a href="/digital-quran/index.html" style="text-decoration: none;">
+      <button class="cta-button">Explore Digital Quran</button>
+      </a>
+    </div>
+  </div>
+  <div class="quran-hero-image">
+    <img src="quran.webp" alt="Digital Quran & AI">
+  </div>
+</section>
+
+<!-- Events & Services Section -->
+ <section class="events-services-section">
+  <!-- Current Events -->
+  <div class="events-side">
+    <h2 class="section-title">Current Events</h2>
+    <div class="event-cards">
+      <!-- Event 1 -->
+      <div class="event-card">
+        <div class="event-image" width="100%" height="50px">
+        <img src="lecture.png" alt="Event 1">
+        </div>
+        <div class="event-content">
+          <h3>Ramadan Lecture Series</h3>
+          <p class="event-desc">Join us every Friday for enlightening lectures during Ramadan.</p>
+        </div>
+      </div>
+      <!-- Event 2 -->
+      <div class="event-card">
+        <div class="event-image" width="100%" height="500px">
+        <img src="iftar.png" alt="Event 2">
+        </div>
+        <div class="event-content">
+          <h3>Community Iftar</h3>
+          <p class="event-desc">Break your fast with the community every evening at the masjid.</p>
+        </div>
+      </div>
+      <!-- Event 3 -->
+      <div class="event-card">
+        <div class="event-image" width="100%" height="500px">
+        <img src="dinner.png" alt="Event 3">
+        </div>
+        <div class="event-content">
+          <h3>Fundraising Dinner</h3>
+          <p class="event-desc">Support local programs while enjoying a community dinner.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Community Services -->
+  <div class="services-side">
+    <h2 class="section-title">Community Services</h2>
+    <div class="service-list">
+      <div class="service-item">
+        <i class="fa-solid fa-mosque service-icon"></i>
+        <div class="service-main">
+          <button class="service-toggle">5 Times Prayer <i class="fa-solid fa-chevron-down chevron"></i></button>
+          <div class="service-desc">
+            Daily prayers organized in congregation with khutbahs on Fridays.
+          </div>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <i class="fa-solid fa-calendar service-icon"></i>
+        <div class="service-main">
+          <button class="service-toggle">Jumuah Salah <i class="fa-solid fa-chevron-down chevron"></i></button>
+          <div class="service-desc">
+            Two Friday prayers with sermons led by our Imams.
+          </div>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <i class="fa-solid fa-star-and-crescent service-icon"></i>
+        <div class="service-main">
+          <button class="service-toggle">Eid Salah <i class="fa-solid fa-chevron-down chevron"></i></button>
+          <div class="service-desc">
+            Community prayers for Eid al-Fitr and Eid al-Adha.
+          </div>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <i class="fa-solid fa-book-open-reader service-icon"></i>
+        <div class="service-main">
+          <button class="service-toggle">Quran Classes <i class="fa-solid fa-chevron-down chevron"></i></button>
+          <div class="service-desc">
+            Classes for children and adults to learn Quran with tajweed.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Subscribtion Center -->
+<section class="subscribe-section">
+  <div class="subscribe-card">
+    <h2>Stay Connected</h2>
+    <p>Get updates on events, programs, and announcements.</p>
+
+    <form id="subscribeForm">
+      <input type="email" id="emailInput" placeholder="your@email.com" required>
+      
+      <div class="g-recaptcha" data-sitekey="6LdnKnksAAAAALp6F5-ttcwBrSCxqkE3UqOXJrqA"></div>
+
+      <div class="btn-group">
+        <button type="button" id="subscribeBtn"><i class="fas fa-envelope"></i> Subscribe</button>
+        <button type="button" id="unsubscribeBtn"><i class="fas fa-trash-alt"></i> Unsubscribe</button>
+      </div>
+    </form>
+
+    <small class="note">
+      Enter your email to subscribe or unsubscribe. You can unsubscribe anytime.
+    </small>
+
+    <p id="statusMsg"></p>
+  </div>
+</section>
+
+</section>
+
+<!-- Contact & Donation Section -->
+
+<section class="contact-donate-section">
+  <div class="contact-donate-wrapper">
+
+    <!-- CONTACT SIDE -->
+    <div class="contact-panel">
+      <h2>Get in Touch</h2>
+      <p class="contact-subtext">
+        Have a question, suggestion, or need assistance?  
+        Reach out and we’ll get back to you, in shā’ Allāh.
+      </p>
+
+      <form id="contactForm">
+        <div class="field">
+          <label>Full Name</label>
+          <input type="text" id="name" required />
+        </div>
+
+        <div class="field">
+          <label>Email</label>
+          <input type="email" id="email" required />
+        </div>
+
+        <div class="field">
+          <label>Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            pattern="[0-9]{10}"
+            placeholder="10-digit number"
+            required
+          />
+        </div>
+
+        <div class="field">
+          <label>Message</label>
+          <textarea id="message" rows="4" required></textarea>
+        </div>
+
+        <button type="submit" class="contact-btn">
+          Send Message
+        </button>
+      </form>
+    </div>
+
+    <!-- DONATION SIDE -->
+    <div class="donation-panel">
+      <h2>Support the Masjid</h2>
+      <p class="donation-subtext">
+        Your donations help sustain prayer services, programs, and community initiatives.
+      </p>
+
+      <div class="zeffy-wrapper">
+        <div style="position:relative;overflow:hidden;height:450px;width:100%;"><iframe title='Donation form powered by Zeffy' style='position: absolute; border: 0; top:0;left:0;bottom:0;right:0;width:100%;height:100%' src='https://www.zeffy.com/embed/donation-form/islamic-association-of-texas-general-fund-and-sadaqah-2' allowpaymentrequest allowTransparency="true"></iframe></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <h3>Islamic Association of Texas</h3>
+      <p>
+        Serving the Richardson community with prayer, education,
+        and unity — grounded in the Qur’an and Sunnah.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/homepage/index.html">Home</a></li>
+        <li><a href="#donate">Donate</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#services">Community Services</a></li>
+      </ul>
+    </div>
+
+    <!-- TOOLS & POLICIES -->
+    <div class="footer-column">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="/digital-quran/index.html">Digital Qur’an</a></li>
+        <li><a href="#">AI Memorization Tool (Coming Soon)</a></li>
+        <li><a href="/islam/index.html">Islam</a></li>
+        <li><a href="#">Terms of Use</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <ul class="footer-contact">
+        <li>
+          <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9A2 2 0 1112 7a2 2 0 010 4z"/></svg>
+            132 N Glenville Dr, Richardson, TX 75081
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79A15.05 15.05 0 0013.21 17.38l2.2-2.2a1 1 0 011.02-.24c1.12.35 2.33.54 3.58.54a1 1 0 011 1V20a1 1 0 01-1 1C7.82 21.18 2.82 16.18 2 6.01A1 1 0 013 5h3.01a1 1 0 011 1c0 1.25.19 2.46.54 3.58a1 1 0 01-.24 1.02L6.62 10.79z"/></svg>
+            (972) 863-9696
+        </li>
+        <li>
+          <svg class="icon email-ico" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.104 0-2 .896-2 2v12c0 1.104.896 2 2 2h16c1.104 0 2-.896 2-2V6c0-1.104-.896-2-2-2zm0 2l-8 5-8-5v-0.001L20 6zm0 12H4V8l8 5 8-5v10z"/></svg>
+            <a href="mailto:abuhanifahiat@gmail.com">abuhanifahiat@gmail.com</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> Islamic Association of Texas. All rights reserved.</span>
+
+    <a
+      href="https://www.linkedin.com/in/numanullah-moosakhail-4504a1350/"
+      target="_blank"
+      class="developer-credit"
+    >
+      Developed by <strong>Numanullah Moosakhail</strong>
+    </a>
+  </div>
+</footer>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
